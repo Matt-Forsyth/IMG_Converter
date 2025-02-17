@@ -1,0 +1,84 @@
+[Desktop Entry]
+Version=1.0
+Name=Image Converter
+Comment=Converts common image types into .png & Common video types to .mp4
+Exec=python3 /path/to/your/script.py
+Icon=/path/to/icon.png
+Terminal=false
+Type=Application
+Categories=Graphics;Utility;
+
+
+
+
+#How to Create and Use a .desktop File
+#
+#1. Create the .desktop File
+#   Open a terminal and type:
+#
+#   nano ~/.local/share/applications/MyApp.desktop
+#
+#   Replace "MyApp.desktop" with the desired name of your application.
+#
+#2. Add the Following Contents
+#   Modify the paths accordingly:
+#
+#   [Desktop Entry]
+#   Version=1.0
+#   Name=My Application
+#   Comment=Describe what your app does here.
+#   Exec=python3 /path/to/your/script.py
+#   Icon=/path/to/icon.png
+#   Terminal=false
+#   Type=Application
+#   Categories=Utility;
+#
+#   Explanation:
+#   - Name= → The display name of your application.
+#   - Comment= → A short description of your application.
+#   - Exec= → The command to execute your script.
+#   - Icon= → The path to the icon image.
+#   - Terminal=false → Set to "true" if the application runs in a terminal.
+#   - Type=Application → Specifies that this is an application.
+#   - Categories= → Defines the application category in the system menu.
+#
+#3. Save and Exit
+#   - Press CTRL + X to exit.
+#   - Press Y then Enter to save.
+#
+#4. Make the .desktop File Executable
+#   Run the following command to make it executable:
+#
+#   chmod +x ~/.local/share/applications/MyApp.desktop
+#
+#5. Update the Application Database
+#   Run:
+#
+#   update-desktop-database ~/.local/share/applications/
+#
+#6. Launch the Application
+#   - Search for the application in the system menu.
+#   - Alternatively, run it manually using:
+#
+#     gtk-launch MyApp
+#
+#     (Replace "MyApp" with the actual name of your .desktop file.)
+#
+#7. Troubleshooting
+#   - Check if the script runs manually:
+#
+#     python3 /path/to/your/script.py
+#
+#   - Validate the .desktop file:
+#
+#     desktop-file-validate ~/.local/share/applications/MyApp.desktop
+#
+#   - If necessary, find the absolute path of Python:
+#
+#     which python3
+#
+#     Then update the "Exec=" line with the absolute path:
+#
+#     Exec=/usr/bin/python3 /path/to/your/script.py
+#
+#Your application should now appear in the system menu and be launchable like any installed program.
