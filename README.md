@@ -1,2 +1,2 @@
 # IMG_Converter
-Converts common image types into Png and Common video types to mp4
+Code Lib Version 0.1.0
